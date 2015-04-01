@@ -18,7 +18,7 @@ or
 ## Discovery
 
 To send a Discovery Request, call discover() with no arguments. It returns
-results as an associative array.  For example,
+results as an array.  For example,
 
     print_r($taxii->discover());
 
@@ -54,7 +54,7 @@ might display (some fields removed for readability)
 ## Listing Collections
 
 To send a Collection Information Request, call getCollectionInfo() with no
-arguments.  It returns results as an associative array.  For example,
+arguments.  It returns results as an array.  For example,
 
     print_r($taxii->getCollectionInfo());
 
@@ -112,6 +112,6 @@ might display
 ## Inbox Messages
 
 To send an Inbox Message, call sendInboxMessage() with a string containing
-the message to send.  This method is untested, but really just sticks your
-message (including possible XML) into the taxii_11:Content tag of a
-pre-defined XML message.
+the message to send.  It does not return anything.  This method is untested,
+but really just sticks your message (including possible XML) into the
+taxii_11:Content tag of a pre-defined XML message.
